@@ -2,9 +2,9 @@
 
 ## 1. Thông tin thực hiện
 
-- Họ và tên: Trần Đăng Ninh
-- Mã sinh viên: B23DCCN634
-- Nội dung: Bài 1, Bài 2 và Bài 3
+- **Trần Hữu Nhật** - B23DCCN627 (Bài 1)
+- **Trần Đăng Ninh** - B23DCCN634 (Bài 2)
+- **Trần Tiến Đạt** - B23DCCN151 (Bài 3)
 
 ## 2. Môi trường và thư viện
 
@@ -42,11 +42,11 @@ CoAP_Lab/
 
 ## 4. Địa chỉ tài nguyên
 
-| Bài | Địa chỉ URI | Phương thức |
-| --- | --- | --- |
-| 1 | `coap://127.0.0.1:5683/iot/lab/message` | GET, POST |
-| 2 | `coap://127.0.0.1:5683/iot/lab/sensor01/data` | GET |
-| 3 | `coap://127.0.0.1:5683/iot/lab/light01/status` | GET, PUT, Observe |
+| Bài | Địa chỉ URI                                    | Phương thức       |
+| --- | ---------------------------------------------- | ----------------- |
+| 1   | `coap://127.0.0.1:5683/iot/lab/message`        | GET, POST         |
+| 2   | `coap://127.0.0.1:5683/iot/lab/sensor01/data`  | GET               |
+| 3   | `coap://127.0.0.1:5683/iot/lab/light01/status` | GET, PUT, Observe |
 
 Trong đề dùng `localhost`; trên máy chạy chương trình, `127.0.0.1` là địa chỉ loopback IPv4 tương ứng. Cả ba Server đều sử dụng cổng UDP 5683, vì vậy chỉ chạy một Server tại một thời điểm.
 
@@ -152,23 +152,23 @@ python bai3/light_controller_bai3.py
 
 Các lệnh của Controller:
 
-| Lệnh | Chức năng |
-| --- | --- |
-| `ON` | Bật đèn bằng PUT |
-| `OFF` | Tắt đèn bằng PUT |
+| Lệnh     | Chức năng               |
+| -------- | ----------------------- |
+| `ON`     | Bật đèn bằng PUT        |
+| `OFF`    | Tắt đèn bằng PUT        |
 | `STATUS` | Xem trạng thái bằng GET |
-| `EXIT` | Thoát Controller |
+| `EXIT`   | Thoát Controller        |
 
 Ví dụ payload điều khiển gửi bằng PUT:
 
 ```json
-{"device_id": "light01", "command": "ON"}
+{ "device_id": "light01", "command": "ON" }
 ```
 
 Payload trạng thái GET/Observe:
 
 ```json
-{"device_id": "light01", "status": "ON"}
+{ "device_id": "light01", "status": "ON" }
 ```
 
 Kết quả đầu ra mong đợi ở Monitoring Client:
